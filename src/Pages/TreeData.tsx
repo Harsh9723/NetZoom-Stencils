@@ -136,15 +136,6 @@ let getsessionId = sessionStorage.getItem("sessionID")
 
  
 
-  //call api for get visio node and other property
-
-
-
-  // fetch for stencil name on property table 
-
-  
-
-
   //fetch related tab and and property table data
   const GetPropertyValue = useCallback (async (eqId: string) => {
     setIsLoading(true);
@@ -155,22 +146,14 @@ let getsessionId = sessionStorage.getItem("sessionID")
           eqidList:[eqId],
           sessionId:getsessionId
         })
-    
+
       const librarypropertywithskeloton = libraryPropertyResponse.data.data.deviceJson 
       let parse = JSON.parse(librarypropertywithskeloton)
       let property = parse.find((item:any) =>item.TableName === "Hardware")
       let parseProperty = JSON.parse(property.Properties      )
       console.log("property", parseProperty)  
 
-  
       setPropertyData(parseProperty);
-  
-      // if (relatedDevice) {
-      //   setRelatedDevicesVisible(true);
-      // } else {
-      //   setRelatedDevicesVisible(false);
-      // }
-
     } catch (error) {
       console.error('API Error:', error);
     } finally {
@@ -316,10 +299,6 @@ debugger
 
   };
 
-  
-  useEffect(() =>{
-    console.log("eqid",Eqid)
-        },[Eqid])
 
   //logic of select treenode manually
   const handleSelectMainTree = async (selectedKeys: Key[], info: { event: "select"; selected: boolean; node: any; selectedNodes: any[]; nativeEvent: MouseEvent }) => {
@@ -338,17 +317,15 @@ debugger
 
     if (selectedNode.ShapeID) {
       await callApiForGetDevicePreview(selectedNode.ShapeID);
-      // setEqId(selectedNode.eqid);
       setRelatedDevicesVisible(false)
     } else if (selectedNode.EQID) {
       setSelectedKeys([selectedNode.key])
       await GetPropertyValue(selectedNode.EQID);
-      // setSelectedNode([selectedNode])
     } 
     else if (!selectedNode.EQID && !selectedNode.ShapeID) {
       setPropertyData([]);
       setSvgContent(null);
-      // setRelatedDevicesVisible(false);
+      setRelatedDevicesVisible(false);
     }
 
     if(selectedNode.HasRelated === true){
@@ -359,8 +336,6 @@ debugger
   };
 
  
-
-  
 
   const handleSelectRelatedTree = async (relatedSelectedKeys: Key[], info: { event: "select", selected: boolean; node: any, nativeEvent: MouseEvent }) => {
     if (tabValue !== 1) return;
@@ -472,7 +447,7 @@ useEffect(() => {
   if (initialTreeData) {
     setTreeData(initialTreeData);
     // Apply autoExpand on first-time tree render
-    autoExpandDefaultNodesOfTree(initialTreeData).then(async ({ expandedKeys, selectedKeys, selectedNode, isSelected }) => {
+    autoExpandDefaultNodesOfTree(initialTreeData).then(async ({ expandedKeys,selectedNode, isSelected }) => {
       setExpandedKeys(expandedKeys);
 
         if (selectedNode.EQID && isSelected) {

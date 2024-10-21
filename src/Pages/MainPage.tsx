@@ -64,10 +64,11 @@ const SearchComponent = () => {
     selectedProductNumber,
     selectedDtManufacturers,
     selectedManufacturerDetails
-  }), [keyword, kwdSearchType, selectedManufacturer, selectedEqType, selectedProductNumber, selectedDtManufacturers]);
+  }), [ kwdSearchType, selectedManufacturer, selectedEqType, selectedProductNumber, selectedDtManufacturers]);
 
   const onSuccess = (resultData: any[]) => {
     setLoading(false)
+
     // if (dtResultdata && dtResultdata.length > 0) {
 // console.log(resultData)
 //       setDtManufacturers(dtResultdata);
@@ -126,7 +127,7 @@ const SearchComponent = () => {
       setLoading(false);
     };
     fetchManufacturers();
-  }, []);
+  }, [getsessionId]);
 
   // Fetch Equipment Types based on Manufacturer
   useEffect(() => {

@@ -69,7 +69,6 @@ export const Search = async (
     kwdSearchType,
     related,
     Eqid,
-    selectedManufacturer,
     selectedEqType,
     selectedProductLine,
     selectedProductNumber,
@@ -132,34 +131,17 @@ export const Search = async (
       }
     
   } catch (error) {
-    
+ 
   }
   
 }
 };
 
 
-interface SearchResult {
-  MfgAcronym: string;
-  Manufacturer: string;
-  EQTYPE: string;
-  MFGPRODLINE: string;
-  MFGPRODNO: string;
-  EQID: string;
-  MFGDESC: string;
-}
 
 
-interface TreeNode1 {
-  title: string | JSX.Element;
-  key: string;
-  icon: JSX.Element;
-  children: TreeNode1[];
-  EQID?: string;
-  Type?: string;
-  isLeaf?: boolean;
-  ProductNumber?: string
-}
+
+
 
 /**
  * Transforms search results into a tree data structure.
@@ -167,33 +149,6 @@ interface TreeNode1 {
  * @returns The transformed tree data.
  */
 
-interface View {
-  Name: string;
-  ShapeID: string;
-}
-interface Product {
-  Name: string;
-  Description: string;
-  EQID: string;
-  HasRelated: boolean;
-  HasPowerPorts: boolean;
-  HasNetworkPorts: boolean;
-  Views: View[];
-}
-
-interface EQType {
-  Name: string;
-  ProductNumber: Product[];
-}
-
-interface Manufacturer {
-  Name: string;
-  EQType: EQType[];
-}
-
-interface ApiResponse {
-  Manufacturer: Manufacturer[];
-}
 
 interface TreeNode {
   title: string;
@@ -213,7 +168,21 @@ interface TreeNode {
   
 export const transformToRcTreeData = (data: any): TreeNode[] => {
   const treeData: TreeNode[] = [];
-let parseddata = JSON.parse(data)
+  
+  let parseddata = JSON.parse(data);
+  // Add the root node titled "Search Result"
+  const rootNode: TreeNode = {
+    title: "Search Result",
+    key: "root",
+    icon: (
+      <img
+        src="./assets/Icons/main_node.png"
+        alt="Search Results Icon"
+        style={{ width: 16, height: 16 }}
+      />
+    ),
+    children: treeData
+  };
 
   if (parseddata?.Manufacturer) {
     for (let manufacturer of parseddata.Manufacturer) {
@@ -250,14 +219,17 @@ let parseddata = JSON.parse(data)
               let productNode: TreeNode = {
                 title: product.Name,
                 key: `${product.EQID}`,
-                EQID:product.EQID,
-                Description:product.Description,
-                HasNetworkport:product.HasNetworkPorts,
-                HasPowerPorts:product.HasPowerPorts,
-                HasRelated:product.HasRelated,
+                EQID: product.EQID,
+                Description: product.Description,
+                HasNetworkport: product.HasNetworkPorts,
+                HasPowerPorts: product.HasPowerPorts,
+                HasRelated: product.HasRelated,
                 icon: (
                   <img
-                    src="./assets/Icons/product_no.gif" style={{ width: 16, height: 16 }} alt="Product Number" />
+                    src="./assets/Icons/product_no.gif"
+                    style={{ width: 16, height: 16 }}
+                    alt="Product Number"
+                  />
                 ),
                 children: []
               };
@@ -268,8 +240,8 @@ let parseddata = JSON.parse(data)
                     title: view.Name,
                     key: `view-${view.ShapeID}`,
                     isLeaf: true,
-                    ShapeID:view.ShapeID,
-                    ProductNumber:product.Name,
+                    ShapeID: view.ShapeID,
+                    ProductNumber: product.Name,
                     icon: view.Name.toLowerCase().includes('front') ? (
                       <img src="./assets/Icons/Front.png" alt="Front icon" />
                     ) : view.Name.toLowerCase().includes('rear') ? (
@@ -277,7 +249,6 @@ let parseddata = JSON.parse(data)
                     ) : view.Name.toLowerCase().includes('top') ? (
                       <img src="./assets/Icons/TopView.png" alt="Top Icon" />
                     ) : null,
-
                   };
                   productNode.children?.push(viewNode);
                 }
@@ -295,8 +266,10 @@ let parseddata = JSON.parse(data)
     }
   }
 
-  return treeData;
+  return [rootNode];
+
 };
+
 
   
 
