@@ -108,10 +108,8 @@ body, html {
   .MuiTabs-root .MuiTabs-indicator{
     width: 0px;
   }
-  /* .css-1oy0tqq-MuiButtonBase-root-MuiTab-root.Mui-selected{
-    color: #ffffff;
-  }
-   */
+
+
   /* Style for selected node */
   .custom-rc-tree  .rc-tree-treenode-selected{
     background-color: var(--font-color) !important; 
@@ -177,15 +175,7 @@ body, html {
     font-size: 12px;
     font-family: 'Segoe UI', sans-serif;
   }
-  /* .css-yp69yl-MuiButtonBase-root-MuiTab-root{
-  
-    min-height: 10px !important
-  }
-  
-  .css-1wy54b3-MuiButtonBase-root-MuiTab-root{
-    min-height: 10px !important
-  
-  } */
+
   
   .svg path {
     fill: var(--font-color); 
@@ -228,10 +218,7 @@ body, html {
   font-weight: 500 !important;
  }
 
-/* .css-1edfpdg-MuiTypography-root{
-  font-size: 12px;
-  font-family:'Segoe UI', sans-serif ;
-} */
+
 /* Link styles */
 .setting-link {
   font-size: 12px;
@@ -290,11 +277,6 @@ body, html {
 }
 
 
-
-/* .css-46bh2p-MuiCardContent-root:last-child{
-  padding-bottom: 16px !important;
-} */
-
 .MuiTableBody-root{
   display: flex !important;
   flex-direction: column;
@@ -316,27 +298,16 @@ body, html {
   font-weight: 500 !important;
  
 }
+.search-field-wrapper  .MuiFormLabel-root{
+  padding-top: 0px !important;
+  line-height: 0.9em !important;
+  }
 
- .css-c49uqv-MuiPaper-root-MuiTableContainer-root{
-  border-radius: 0px !important;
-  /* background-color: #778899 !important; */
+
+.MuiFormControl-root .MuiFormLabel-root {
+  padding-top: 0px;
+  line-height: 0.8em;
 }
-
-
-/* .css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
-  width: 100vw;
-  
-} */
-
-
-
-.css-763qkj-MuiTypography-root{
-  /* margin-top: 0px !important; */
-  /* padding-right: 0px !important; */
-}
-.css-1q964xs-MuiFormLabel-root-MuiInputLabel-root{
-  top : -5px !important;
-} 
 
 
 .search-lbl>.MuiInputBase-root>.MuiOutlinedInput-notchedOutline>legend>span {
