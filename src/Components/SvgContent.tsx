@@ -14,12 +14,12 @@ const SvgContent: React.FC<SvgContentProps> = ({ svgContent, productnumber }) =>
 
   const handleDragStart = async (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
-    await insertSvgContentIntoOffice(svgContent, 'drag', shapeCounter);
+    await insertSvgContentIntoOffice(decodedSvg, 'drag', shapeCounter);
     setShapeCounter((prev) => prev + 1);
   };
 
   const handleDoubleClick = async () => {
-    await insertSvgContentIntoOffice(svgContent, 'double-click', shapeCounter);
+    await insertSvgContentIntoOffice(decodedSvg, 'double-click', shapeCounter);
     setShapeCounter((prev) => prev + 1);
   };
 

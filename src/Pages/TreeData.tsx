@@ -455,8 +455,10 @@ debugger
         ShapeID: node.ShapeID,
       });
       const parsesvg = JSON.parse(response.data.data.devicePreviewJson)
-console.log(parsesvg)
-      await insertSvgContentIntoOffice(parsesvg, 'drag', shapeCounter)
+      const decodedSvg = window.atob(parsesvg[0].SVG);
+
+  console.log(parsesvg)
+      await insertSvgContentIntoOffice(decodedSvg, 'drag', shapeCounter)
       setShapeCounter(shapeCounter + 1)
       return response;
     } catch (error) {

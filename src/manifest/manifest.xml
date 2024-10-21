@@ -25,7 +25,7 @@
 	<SupportUrl DefaultValue="https://www.visiostencils.com/support/index.html" />
 	<!-- Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list. -->
 	<AppDomains>
-		<AppDomain>https://stencils.vercel.app/</AppDomain>
+		<AppDomain>https://netzoom-stencils.vercel.app/?vercelToolbarCode=OzKpCQ5nmmryJhi</AppDomain>
 	</AppDomains>
 	<!--End Basic Settings. -->
 
@@ -34,7 +34,7 @@
 		<Host Name="Workbook"/>
 	</Hosts>
 	<DefaultSettings>
-    <SourceLocation DefaultValue= "https://stencils.vercel.app/" />
+    <SourceLocation DefaultValue= "https://netzoom-stencils.vercel.app/?vercelToolbarCode=OzKpCQ5nmmryJhi" />
 	
 	</DefaultSettings>
 	<!-- End TaskPane Mode integration.  -->
@@ -130,7 +130,7 @@
 			</bt:Images>
 			<bt:Urls>
 				<bt:Url id="NZ.DesktopFunctionFile.Url" DefaultValue="https://www.visiostencils.com/stencilsforoffice/commands.html" />
-				<bt:Url id="NZ.Taskpane.Url" DefaultValue="https://stencils.vercel.app/" />
+				<bt:Url id="NZ.Taskpane.Url" DefaultValue="https://netzoom-stencils.vercel.app/?vercelToolbarCode=OzKpCQ5nmmryJhi" />
 				<bt:Url id="NZ.GetStarted.LearnMoreUrl" DefaultValue="https://www.visiostencils.com/index.html" />
 			</bt:Urls>
 			<!-- ShortStrings max characters==125. -->
