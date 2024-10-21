@@ -1,0 +1,12 @@
+{
+    "tagline": "./stencilforoffice/nz/tagline.html",
+    "wwwurl": "./stencilforoffice/nz/wwwurl.html",
+    "unsupported":"./stencilforoffice/nz/unsupported.html",
+    "backdrop": "https://storage.googleapis.com/nzpublic/nzgraphics/stencilsforoffice/icons/nz/backdrop.png",
+    "logoicon": "https://storage.googleapis.com/nzpublic/nzgraphics/stencilsforoffice/icons/nz/nz.png",
+    "logourl": "https://www.netzoom.com",
+    "logotooltip": "NetZoom inc.",
+    "logoalt": "NetZoom Logo",
+    "colortheme": "#1F85DE,#491313,#222222,#892C0F,#10431d,#102857",
+    "favicon": "https://storage.googleapis.com/nzpublic/nzgraphics/stencilsforoffice/icons/nz/16x16.png"
+  }

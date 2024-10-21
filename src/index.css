@@ -1,0 +1,905 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .MuiTypography, 
+  .MuiFormControlLabel-label, 
+  .MuiInputBase-root, 
+  .MuiButton-root {
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+ 
+  
+   .Mui-focused{
+    color: rgb(255, 255, 255) !important;
+    line-height: 2.4375em;
+    font-size: 12px;
+   }
+   .MuiInputBase-input .MuiOutlinedInput-input h1 {
+    font-size: 12px;
+  }
+  .MuiSelect-select .MuiSelect-outlined .MuiInputBase-input .MuiOutlinedInput-input{
+    font-size: 12px;
+    padding: 0px 5px
+  }
+  .css-7u6v33-MuiTabs-root{
+    min-height: 25px;
+  }
+  
+  /* .css-1kdujqz-MuiFormControlLabel-root .MuiFormControlLabel-label {
+    color: black;
+} */
+  
+  .rc-tree .rc-tree-switcher-noop,
+  .rc-tree .rc-tree-switcher_open,
+  .rc-tree .rc-tree-switcher_close
+   {
+    background: none !important; 
+    width: 0; 
+    height:0 ; 
+  }
+
+  .custom-rc-tree .rc-tree-switcher {
+    display: none;
+  }
+  
+  
+  .custom-rc-tree .rc-tree-node .rc-tree-switcher {
+   color: var(--font-color);
+  }
+  
+  
+  .custom-rc-tree .rc-tree-node.rc-tree-node-leaf .rc-tree-switcher {
+    display: none;
+  }
+  .rc-tree-node-selected{
+    /* color: var(--font-color); */
+    background-color: var(--font-color) !important;
+    box-shadow: none !important;
+    
+  }
+
+
+  .custom-rc-tree .rc-tree-node-selected .rc-tree-switcher {
+    color: black !important; /* Set icon color */
+
+  }
+  
+  /* Set rc-tree width to full */
+  .custom-rc-tree {
+    width: 95%; 
+  }
+  
+  /* Additional styling for rc-tree node content */
+  .custom-rc-tree .rc-tree-node-content-wrapper {
+    font-size: 12px; 
+    font-family: "Segoe UI", sans-serif; 
+  }
+  
+  /* Custom global styles */
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: rgb(255, 255, 255) !important;
+  }
+  
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    color: rgb(255, 255, 255) !important;
+  }
+  
+  .css-ptiqhd-MuiSvgIcon-root {
+    color: white !important;
+  }
+  
+  .css-1yjog0e-MuiTableCell-root {
+    color: white !important;
+  }
+  
+  
+  .custom-rc-tree .rc-tree-switcher_open{
+    background-color: #efefef;
+  }
+  
+  .MuiTabs-root .MuiTabs-indicator{
+    width: 0px;
+  }
+  /* .css-1oy0tqq-MuiButtonBase-root-MuiTab-root.Mui-selected{
+    color: #ffffff;
+  }
+   */
+  /* Style for selected node */
+  .custom-rc-tree  .rc-tree-treenode-selected{
+    background-color: var(--font-color) !important; 
+    color: black !important; 
+    width: 100%; 
+    line-height: 0px;
+    min-height: 10px !important;
+    display: flex !important;
+    align-items: center;
+    position: unset !important;
+  }
+
+  .rc-tree-treenode{
+    display: flex !important;
+    align-items: center;
+    width: 100% !important;
+  }
+
+  .rc-tree{
+    width: 100%;
+  }
+  
+  /* Ensure expand/collapse icons also match the selected node styles */
+  .custom-rc-tree .rc-tree-node-selected .rc-tree-switcher {
+    color: black !important; 
+    background-color: #efefef !important;  
+  }
+  
+  /* Ensure icons inside selected nodes match the background */
+  .custom-rc-tree .rc-tree-node-selected .rc-tree-iconEle {
+    background-color: #efefef !important; 
+  }
+  
+  /* Set icon styles for selected nodes */
+  .custom-rc-tree .rc-tree-node-selected .css-i4bv87-MuiSvgIcon-root {
+    color: black !important; 
+    background-color: #efefef !important;  
+  }
+  
+  .MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary.Mui-selected {
+    color: rgb(168, 202, 230) !important; 
+  }
+  
+  
+  .MuiTabs-indicator.css-1aquho2-MuiTabs-indicator {
+    background-color: white !important; 
+  }
+  
+  .rc-tree .rc-tree-treenode .rc-tree-node-content-wrapper{
+   position: unset !important;
+   display: flex !important;
+   align-items: center !important;
+  }
+  .MuiTabs-scroller{
+    margin-top: 0px;
+  }
+
+  .rc-tree .rc-tree-treenode{
+    line-height: 0px;
+  }
+  
+  .MuiFormControlLabel-root .MuiFormControlLabel-label{
+    font-size: 12px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  /* .css-yp69yl-MuiButtonBase-root-MuiTab-root{
+  
+    min-height: 10px !important
+  }
+  
+  .css-1wy54b3-MuiButtonBase-root-MuiTab-root{
+    min-height: 10px !important
+  
+  } */
+  
+  .svg path {
+    fill: var(--font-color); 
+  }
+
+
+
+
+/* General settings */
+
+
+/* Container styles */
+.setting-container {
+  background-color: var(--bg-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--font-color);
+  padding: 5px;
+  overflow: hidden;
+}
+
+
+/* Box styles */
+.setting-box {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* Typography styles */
+ .setting-text {
+  font-size: 12px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+  color: var(--font-color);
+  font-weight: 500 !important;
+ }
+
+/* .css-1edfpdg-MuiTypography-root{
+  font-size: 12px;
+  font-family:'Segoe UI', sans-serif ;
+} */
+/* Link styles */
+.setting-link {
+  font-size: 12px;
+  color: var(--link-color) !important;
+  text-decoration: none;
+  text-decoration: underline !important;
+}
+
+
+
+/* TextField styles */
+.custom-textfield {
+  width: 100%;
+}
+
+.custom-textfield .MuiInputLabel-root {
+  font-size: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--font-color);
+}
+
+.custom-textfield .MuiOutlinedInput-root {
+  font-size: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--font-color);
+}
+
+.custom-textfield .MuiOutlinedInput-root fieldset {
+  border-color: var(--font-color);
+}
+
+.custom-textfield .MuiOutlinedInput-root:hover fieldset {
+  border-color: var(--font-color);
+}
+
+.custom-textfield .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: var(--font-color);
+}
+
+.custom-textfield .MuiInputBase-input {
+  padding: 12px 12px;
+}
+
+/* Button styles */
+.custom-button {
+  padding: 5px 15px !important;
+  align-self: center !important;
+  background-color: #87CEEB !important;
+  color: var(--font-color) !important;
+  font-size: 12px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+}
+
+.custom-button:hover {
+  background-color: #87CEEB;
+}
+
+
+
+/* .css-46bh2p-MuiCardContent-root:last-child{
+  padding-bottom: 16px !important;
+} */
+
+.MuiTableBody-root{
+  display: flex !important;
+  flex-direction: column;
+  gap: 5px;
+
+}
+.MuiTableRow-root{
+  display: flex !important;
+  width: 100%;
+  border: 1px solid white !important;
+  border-radius: 0px !important;
+}
+
+.MuiTableCell-root{
+  width: 50%;
+  border: none !important;
+  display: flex !important;
+  align-items: center;
+  font-weight: 500 !important;
+ 
+}
+
+ .css-c49uqv-MuiPaper-root-MuiTableContainer-root{
+  border-radius: 0px !important;
+  background-color: #778899 !important;
+}
+
+
+/* .css-1xomo8h-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
+  width: 100vw;
+  
+} */
+
+
+
+.css-763qkj-MuiTypography-root{
+  /* margin-top: 0px !important; */
+  /* padding-right: 0px !important; */
+}
+.css-1q964xs-MuiFormLabel-root-MuiInputLabel-root{
+  top : -5px !important;
+} 
+
+
+.search-lbl>.MuiInputBase-root>.MuiOutlinedInput-notchedOutline>legend>span {
+  width: 38px !important;
+}
+
+.MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1qhvnat-MuiButtonBase-root-MuiMenuItem-root{
+min-height: auto;
+}
+
+.MuiMenu-list{
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  overflow-y: auto !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  outline: 0 !important;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .MuiMenu-list>.MuiMenuItem-root{
+    min-height: auto !important;
+    
+  }
+}
+
+/* main page  */
+.main-page{
+background-color: var(--bg-color);
+height: 100vh;
+display: flex;
+flex-direction: column;
+overflow-Y: auto;
+overflow-X: hidden;
+align-items: center;
+color: var(--font-color);
+padding: 10px;
+}
+
+/* DialogStyles.css */
+.dialog {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dialog-title,
+.dialog-content,
+.form-control,
+.form-group,
+.form-control-label,
+.dialog-actions button {
+  font-family: 'Segoe UI', sans-serif !important;
+  font-size: 12px !important;
+}
+
+.form-group .MuiFormControlLabel-root.MuiFormControlLabel-label  {
+color: #000000 !important;
+}
+@media (max-width: 600px) {
+  .dialog-title,
+  .dialog-content,
+  .form-control,
+  .form-group,
+  .form-control-label,
+  .dialog-actions button {
+    font-size: 10px;
+  }
+}
+
+/* visit visiostencil */
+
+.box-container {
+  top: 0px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 11px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  padding: 0;
+  max-width: 20px;
+  cursor: pointer;
+  color: var(--font-color);
+}
+
+.visit-text {
+  margin-left: 8px !important;
+  white-space: nowrap;
+  font-size: 12px !important;
+  font-family: 'Segoe UI',sans-serif !important;
+}
+
+.link-text {
+  margin-left: 4px !important;
+  cursor: pointer;
+  color: var(--link-color);
+  text-decoration: underline;
+  white-space: nowrap;
+  font-size: 12px !important;
+  font-family: 'Segoe UI',sans-serif !important; 
+}
+
+/* Setting container mainpage */
+
+.render-container-mainpage{
+  width: 100%;
+  /* height: 100vh; */
+  margin-top: 0px;
+  padding: 0px;
+}
+
+/* Form  */
+/* Box styles */
+.form-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  margin-top: 7px;
+}
+
+/* Container for the search input and image */
+.search-input-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Styling for the TextField wrapper */
+.search-field-wrapper {
+  flex-grow: 1;
+  padding: 1px;
+  font-size: 12px;
+}
+
+/* Custom search image styling */
+.search-icon {
+  padding-left: 0;
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  color: var(--font-color);
+}
+
+/* TextField input styles */
+.text-field-root {
+  height: 40px !important;
+}
+
+.text-field-input {
+  color: var(--font-color) !important;
+  font-size: 12px !important;
+  padding: 0px 0px !important;
+}
+
+.text-field-label {
+  color: var(--font-color) !important;
+  font-size: 12px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+}
+
+.text-field-outline {
+  border-color: var(--font-color) !important;
+}
+
+.text-field-outline:hover {
+  border-color: var(--font-color) !important;
+}
+
+.text-field-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--font-color) !important;
+}
+
+/* Select field styles */
+.select-label {
+  color: var(--font-color) !important;
+  font-size: 12px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+  margin-top: 2px !important;
+}
+
+.select-input {
+  color: var(--font-color) !important;
+  font-size: 12px !important;
+  height: auto !important;
+}
+
+.select-menu-item {
+  font-size: 12px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+  color: var(--black-font) !important;
+}
+
+.disabled-menu-item {
+  font-size: 12px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+  color: var(--black-font) !important;
+}
+
+.nz-searchcombo .MuiOutlinedInput-notchedOutline{
+  border-color: var(--font-color) !important;
+}
+
+
+ .nz-searchcombo svg{
+  color: white !important;
+ }
+ 
+
+
+/*  TreeComponent  */
+.tabs-container {
+  padding: 10px;
+}
+
+.custom-tabs {
+  min-height: 26px;
+  padding: 0;
+  margin: 0;
+  height: 37px;
+}
+
+.custom-tab {
+  font-size: 12px !important;
+  font-family: "Segoe UI", sans-serif !important;
+  text-transform: none !important;
+  color: var(--font-color) !important;
+  padding: 4px 8px !important;
+  margin-right: 10px !important;
+  height: 10px !important ;
+}
+
+.custom-tab-related {
+  font-size: 12px !important;
+  font-family: "Segoe UI", sans-serif !important;
+  text-transform: none !important;
+  color: var(--font-color) !important;
+  padding: 4px 8px !important;
+  min-width: auto !important;
+}
+
+.custom-rc-tree {
+  width: 100%;
+}
+
+/* loading  */
+
+.backdrop {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: var(--mui-zindex-drawer, 1201); 
+}
+
+.circular-progress {
+  color: var(--black-font) !important;
+}
+.default-all{
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+/* typography p  */
+.typography-title {
+  margin-top: 20px !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  font-family: 'Segoe UI', sans-serif !important;
+  padding: 0 12px !important;
+  font-size: 15px !important;  
+}
+
+@media (max-width: 600px) { 
+  .typography-title {
+    font-size: 12px !important; 
+  }
+}
+
+
+
+/* property table */
+.snackbar-message {
+  color: #050505;
+  background-color: #ffffff;
+}
+
+.snackbar-content {
+  background-color: var(--font-color) !important;
+  color: var(--font-color);
+}
+
+.copy-icon-wrapper {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+
+.copy-icon-wrapper img {
+  width: 16px;
+  height: 16px;
+}
+
+.styled-table-row:hover {
+  background-color: #ffffff;
+}
+
+.styled-table-row:hover .copy-icon-wrapper {
+  opacity: 1;
+}
+
+
+/* preloadpage  */
+
+.preload-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 3rem;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 3.5rem;
+}
+
+.title {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-family: 'Segoe UI, sans-serif';
+  margin-top: 10px;
+}
+
+.font-size-20 {
+  font-size: 12px;
+}
+
+.font-size-25 {
+  font-size: 25px;
+}
+
+.font-size-30 {
+  font-size: 25px;
+}
+
+.font-size-35 {
+  font-size: 25px;
+}
+
+.bg-size-100 {
+  background-size: 100%;
+}
+
+.bg-size-90 {
+  background-size: 90%;
+}
+
+.bg-size-contain {
+  background-size: contain;
+}
+
+
+/* SvgContent */
+.svg-card {
+  background-color: #778899 !important;
+  margin-top: 20px;
+  position: relative !important;
+  border-radius: 8px; 
+  color: white;
+  font-size: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  justify-content: center !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.svg-card-sm {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.svg-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  justify-content: flex-end !important;
+  align-items: center;
+}
+
+.svg-wrapper svg {
+  width: 100%;
+  height: auto;
+  max-height: 325px;
+}
+
+.svg-wrapper-md svg {
+  max-height: 250px;
+}
+
+.svg-wrapper-sm svg {
+  max-height: 200px;
+}
+.pnumber-div{
+  display: flex;
+justify-content: center !important;
+}
+.product-number {
+  text-align: center;
+  position: absolute;
+  margin-top: 0;
+  width: 100%;
+  color: var(--font-color);
+  font-weight: bold;
+  bottom: 0.2%;
+}
+
+.product-number {
+  font-size: 10px !important; 
+}
+
+@media (min-width: 600px) {
+  .product-number {
+    font-size: 10px !important; 
+  }
+}
+
+@media (min-width: 900px) {
+  .product-number {
+    font-size: 12px !important; 
+  }
+}
+
+@media (min-width: 1200px) {
+  .product-number {
+    font-size: 12px !important; 
+  }
+}
+
+
+
+.rc-tree-title{
+  font-weight: 500 !important;
+}
+
+.MuiOutlinedInput-input{
+  padding: 12px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+  color: var(--font-color) !important;
+  font-size: 12px !important;
+}
+
+/* radio buttons */
+
+.form-container {
+  min-height: 10px !important;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.radio-group {
+  justify-content: flex-start !important;
+  color: var(--font-color) !important;
+  font-size: 12px;
+}
+
+.form-control-label {
+  font-size: 12px;
+}
+
+.radio {
+  color: var(--font-color) !important;
+  font-size: 12px;
+}
+
+.custom-text-field .MuiInputBase-root {
+  color: var(--font-color); 
+}
+
+.custom-text-field .MuiInputLabel-root {
+  color: var(--font-color);
+font-family: 'Segoe UI', sans-serif;
+font-size: 12px;
+margin-top: 2px;
+}
+
+.custom-text-field .MuiOutlinedInput-root {
+  border-radius: 7px; 
+}
+
+.tagline{
+  font-weight: bold !important;
+    text-align: center !important;
+    font-family: 'Segoe UI', sans-serif !important;
+    padding: 0 12px !important;
+    font-size: 12px !important;
+}
+
+.formcontrol{
+  margin-top: 10;
+  height: auto;
+}
+
+
+.select-dropdown {
+  max-height: 350px !important;
+  overflow-y: auto; 
+}
+.select-dropdown-Pno{
+  max-height: 350px !important;
+  overflow-y: auto;
+}
+.select-dropdown-Pnumber{
+  max-height: 350px !important;
+  overflow-y: auto;
+}
+
+@media (max-width: 1400px) {
+  .select-dropdown-Pno {
+    max-height: 250px !important; 
+  }
+}
+
+@media (max-width: 1400px) {
+  .select-dropdown-Pnumber {
+    max-height: 250px !important; 
+  }
+}
