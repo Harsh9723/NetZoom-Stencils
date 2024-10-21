@@ -42,7 +42,7 @@ const StyledPropertyCard = styled(Card)(({ theme }) => ({
 
 const StyledTableContainer = styled(TableContainer)<TableContainerProps>({
   width: '100%',
-  backgroundColor: '#4e88c9',
+  backgroundColor: '#778899',
   borderRadius: '8px',
   overflow: 'hidden',
   fontFamily: 'Segoe UI, sans-serif',
